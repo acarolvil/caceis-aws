@@ -1,0 +1,22 @@
+.img{
+    width: 20%;
+    
+}
+
+.link{
+    text-decoration: none;
+    display: block;
+    font-size:20px;
+    padding: 10px;
+    color: black;
+    margin-left:20px ;
+    border: 2px rgb(255, 0, 0) solid;
+    border-radius: 15px;
+    width: 19%;
+    margin: 10px;
+    
+}
+
+.link:hover{
+    background-color: rgba(128, 128, 128, 0.089);
+}
