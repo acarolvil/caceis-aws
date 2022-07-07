@@ -3,17 +3,9 @@ import { BrowserModule } from '@angular/platform-browser';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
-import { HeaderComponent } from './header/header.component';
-import { FooterComponent } from './footer/footer.component';
+import { HeaderComponent } from './parts/header/header.component';
 import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
-import { ListComponent } from './pages/red/list/list.component';
-
-
-
-
-
-
-
+import { FooterComponent } from './parts/footer/footer.component';
 
 @NgModule({
   declarations: [
