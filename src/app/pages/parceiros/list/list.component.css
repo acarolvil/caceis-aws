@@ -2,6 +2,7 @@ section {
     width: 90%;
     max-width: 1480px;
     margin: 20px auto;
+    ;
 }
 
 
@@ -28,7 +29,6 @@ h1 {
 
 .table {
     margin: 20px 0;
-    border: 1px solid rgba(0, 0, 0, 0.179);
     background-color: rgba(0, 0, 0, 0.058);
 }
 
@@ -52,22 +52,20 @@ h1 {
 .formulario {
     background-color: rgba(0, 0, 0, 0.058);
     margin-top: 50px;
+    width: 100%;
 
 }
 
-.formulario h1 {
-    padding-top: 20px;
-}
+
 
 form {
     width: 98%;
-    justify-content: center;
     margin-left: 15px;
     padding-bottom: 70px;
 }
 
 .cont {
-    margin-left: 100px;
+    margin-left: 10px;
     padding: 10px;
 }
 
@@ -122,7 +120,4 @@ option {
 
 .botao__form:hover {
     box-shadow: 1px 1px 4px rgb(237, 67, 67);
-}
-.modal.show { 
-    display: block;
 }

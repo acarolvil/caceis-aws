@@ -2,7 +2,8 @@ export class ParceirosModel {
     id: number = 0;
     nome: string = '';
     codigo: string = '';
-    autenticacao: any;
+    autenticacaoId: number=0;
+    conexaoId: number=0;
     conexaoHost: any;
     conexaoPorta: any;
     usuario: string = '';
@@ -10,5 +11,5 @@ export class ParceirosModel {
     chavePrivada: any= '';
     dataDaCriacao: any;
     dataDaAlteracao: any;
-
+    autenticacao: string='';
 }

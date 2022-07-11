@@ -8,10 +8,92 @@
           </button>
         </div>
         <div class="modal-body">
-          <p>Modal body text goes here.</p>
-        </div>
+          <form #form="ngForm" class="was-validaded" class="container" class="my-4">
+            
+          
+            <div class="my-3" class="col-6">
+              <label for="nome" class="form-label">Nome*</label>
+              <input type="text" class="form-control" id="nome" name="nome" #nome="ngModel" [(ngModel)]="parceiro.nome" required>
+              <div *ngIf="nome.errors && nome.touched">
+                <p class="text-danger" *ngIf="nome.errors['required']">Esse campo é inválido</p>
+              </div>
+            </div>
+            <div class="my-3" class="col-6">
+              <label for="codigo" class="form-label">Código*</label>
+              <input type="number" class="form-control" id="codigo" name="codigo" #codigo="ngModel" [(ngModel)]="parceiro.codigo"  required>
+              <div *ngIf="codigo.errors && codigo.touched">
+                <p class="text-danger" *ngIf="codigo.errors['required']">Esse campo é inválido</p>
+              </div>
+            </div>
+            <div class="my-3" class="col-6">
+              <label for="conexaoId" class="form-label" class="my-3">Tipo de conexão*</label>
+              <select class="form-select" id="conexaoId" name="conexaoId" #conexaoId="ngModel" [(ngModel)]="parceiro.conexaoId" required>
+                <option value="{{undefined}}">Selecione</option>
+                <option value="{{item.id}}" *ngFor="let item of tipoConexao">{{item.nome}}</option>
+                
+              </select>
+              <div *ngIf="conexaoId.errors && conexaoId.touched">
+                <p class="text-danger" *ngIf="conexaoId.errors['required']">Esse campo é inválido</p>
+              </div>
+            </div>
+
+            <div id="Passiva" *ngIf="parceiro.conexaoId == 1">
+            
+            </div>
+            <div id="Ativa" *ngIf="parceiro.conexaoId == 2" class="my-3">
+              <div class="my-3" class="col-6">
+                <label for="conexaoHost" class="form-label">Host*</label>
+                <input type="text" class="form-control" id="conexaoHost" name="conexaoHost" #conexaoHost="ngModel" [(ngModel)]="parceiro.conexaoHost" required>
+                <div *ngIf="conexaoHost.errors && conexaoHost.touched">
+                  <p class="text-danger" *ngIf="conexaoHost.errors['required']">Esse campo é inválido</p>
+                </div>
+              </div>
+              <div class="my-3" class="col-6">
+                <label for="conexaoPorta" class="form-label">Porta*</label>
+                <input type="text" name="conexaoPorta" id="conexaoPorta" class="form-control" #conexaoPorta="ngModel" [(ngModel)]="parceiro.conexaoPorta" required>
+              <div *ngIf="conexaoPorta.errors && conexaoPorta.touched">
+                <p class="text-danger" *ngIf="conexaoPorta.errors['required']">Este campo é inválido</p>
+              </div>
+              </div>
+              <div class="my-3" class="col-6">
+                <label for="usuario" class="form-label">Usuário*</label>
+                <input type="text" class="form-control" name="usuario" id="usuario" #usuario="ngModel" [(ngModel)]="parceiro.usuario" required>
+              <div *ngIf="usuario.errors && usuario.touched">
+                <p class="text-danger" *ngIf="usuario.errors['required']">Este campo é inválido </p>
+              </div>
+              </div>
+              <div class="my-3" class="col-6">
+                <label for="autenticaoId" class="form-label">Tipo Autenticação*</label>
+                <select class="form-select" id="autenticacaoId" name="autenticacaoId" #autenticacaoId="ngModel" [(ngModel)]="parceiro.autenticacaoId" required>
+                  <option value="{{undefined}}">Selecione</option>
+                  <option value="{{item.id}}" *ngFor="let item of tipoAutenticacao">{{item.nome}}</option>
+                </select>
+                <div *ngIf="autenticacaoId.errors && autenticacaoId.touched">
+                  <p class="text-danger" *ngIf="autenticacaoId.errors['required']">Este campo é inválido</p>
+                </div>
+              </div>
+              <div  class="my-3" id="Senha" *ngIf="parceiro.autenticacaoId == 1">
+                <div  class="col-6">
+                  <label for="" class="form-label" >Senha*</label>
+                  <input type="text" class="form-control" required>
+                </div>
+              </div>
+              <div class="my-3" id="Chave Pública e Privada" *ngIf="parceiro.autenticacaoId == 2">
+                <div class="col-6">
+                  <label for="" class="form-label" >Senha Chave Privada*</label>
+                  <input type="text" class="form-control" required>
+                </div>
+                <div class="col-6">
+                  <label for="" class="form-label" >Chave Privada*</label>
+                  <input type="text" class="form-control" required>
+                </div>
+                <div></div>
+              </div>
+              
+            </div>
+          </form>
         <div class="modal-footer">
-          <button type="button" class="btn btn-primary">Save changes</button>
+          <button type="button" class="btn btn-primary" (click)="send(form)">Save changes</button>
           <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
         </div>
       </div>
