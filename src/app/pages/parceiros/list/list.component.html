@@ -2,7 +2,7 @@
   <section>
    <h1 class="titulo">Cadastro de Clientes prd</h1>
 
-   <button class="botao">Atualizar</button>
+   <a [routerLink]="['cadastrar']">Cadastrar</a>
 
    <div>
       <table class="table table-responsive">
@@ -33,6 +33,7 @@
                <td>{{item.conexaoPorta}}</td>
                <td>{{item.usuario}}</td>
                <td>{{item.senha}}</td>
+               <td>{{item.senhaPrivada}}</td>
                <td>{{item.chavePrivada}}</td>
                <td>{{item.dataDaCriacao}}</td>
                <td>{{item.dataDaAlteracao}}</td>
@@ -40,7 +41,7 @@
                   <div class="d-flex">
                      <!-- <a class="btn btn-primary mr-1" routerLink="parceiros/list/editar/{{item.id}}">Editar</a> -->
                      <a class="btn btn-primary mr-1" [routerLink]="['editar', item.id]">Editar</a>
-                     <a class="btn btn-secondary">Excluir</a>
+                     <a class="btn btn-secondary" [routerLink]="['excluir', item.id]">Excluir</a>
                   </div>
                </td>
 

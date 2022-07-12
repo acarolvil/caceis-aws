@@ -7,6 +7,7 @@ import { CreateComponent } from './create/create.component';
 import { ListComponent } from './list/list.component';
 import { EditComponent } from './edit/edit.component';
 import { FormsModule } from '@angular/forms';
+import { ExcluirComponent } from './excluir/excluir.component';
 
 
 @NgModule({
@@ -14,7 +15,8 @@ import { FormsModule } from '@angular/forms';
     ListComponent,
     ParceirosComponent,
     CreateComponent,
-    EditComponent
+    EditComponent,
+    ExcluirComponent,
   ],
   imports: [
     CommonModule,
