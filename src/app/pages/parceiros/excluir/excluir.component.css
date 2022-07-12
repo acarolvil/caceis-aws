@@ -1,0 +1,6 @@
+.modal{
+    background: #0000006b;
+}
+.modal.show{
+display: block;
+}

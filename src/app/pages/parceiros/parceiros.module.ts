@@ -22,7 +22,7 @@ import { ExcluirComponent } from './excluir/excluir.component';
   imports: [
     CommonModule,
     ParceirosRoutingModule,
-    FormsModule
+    FormsModule,
   ]
 })
 
