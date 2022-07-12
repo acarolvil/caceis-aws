@@ -18,6 +18,7 @@ import { ExcluirComponent } from './excluir/excluir.component';
     EditComponent,
     ExcluirComponent,
   ],
+  
   imports: [
     CommonModule,
     ParceirosRoutingModule,
