@@ -1,6 +1,6 @@
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
-
+import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
 import { ParceirosRoutingModule } from './parceiros-routing.module';
 import { ParceirosComponent } from './parceiros.component';
 import { CreateComponent } from './create/create.component';
@@ -23,6 +23,7 @@ import { ExcluirComponent } from './excluir/excluir.component';
     CommonModule,
     ParceirosRoutingModule,
     FormsModule,
+    FontAwesomeModule,
   ]
 })
 

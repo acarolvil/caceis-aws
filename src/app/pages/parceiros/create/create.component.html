@@ -1,130 +1,156 @@
 <div class="modal" [class.show]="modalOpen" [class.fade]="!modalOpen">
     <div class="modal-dialog">
-<div class="modal-content">
+        <div class="modal-content">
             <div class="modal-header">
-<h5 class="modal-title">Criação de parceiros</h5>
-<button type="button" class="close" (click)="voltar()">
-    <span aria-hidden="true">&times;</span>
-  </button>
-    </div>
-    <div class="modal-body">
+                <h5 class="modal-title">Criação de parceiros</h5>
+                <button type="button" class="close" (click)="voltar()">
+                    <i class="fa-solid fa-rectangle-xmark"></i>
+                </button>
+            </div>
+            <div class="modal-body">
+                <div class="container">
+                    <form #form="ngForm" class="was-validaded" class="container" class="my-4">
+                        <div class="row">
+                            <div class="col-4 form-group">
+                                <label for="nome" class="form-label">Nome<span class="text-danger">*</span></label>
+                                <input type="text" class="form-control" id="nome" name="nome" #nome="ngModel"
+                                    [(ngModel)]="parceiro.nome" required>
+                                <div *ngIf="nome.errors && nome.touched">
+                                    <p class="text-danger" *ngIf="nome.errors['required']">Esse campo é inválido</p>
+                                </div>
+                            </div>
+                            <div  class=" form-group col-4">
+                                <label for="codigo" class="form-label">Código <span class="text-danger">*</span></label>
+                                <input type="number" class="form-control" id="codigo" name="codigo" #codigo="ngModel"
+                                    [(ngModel)]="parceiro.codigo" required>
+                                <div *ngIf="codigo.errors && codigo.touched">
+                                    <p class="text-danger" *ngIf="codigo.errors['required']">Esse campo é inválido</p>
+                                </div>
+                            </div>
+                            <div class=" form-group col-4">
+                                <label for="conexaoId" class="form-label">Tipo de conexão<span
+                                        class="text-danger">*</span></label>
+                                <select class="form-select" id="conexaoId" name="conexaoId" #conexaoId="ngModel"
+                                    [(ngModel)]="parceiro.conexaoId" required>
+                                    <option value="{{undefined}}">Selecione</option>
+                                    <option value="{{item.id}}" *ngFor="let item of tipoConexao">{{item.nome}}</option>
+                                </select>
+                                <div *ngIf="conexaoId.errors && conexaoId.touched">
+                                    <p class="text-danger" *ngIf="conexaoId.errors['required']">Esse campo é inválido
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div id="Passiva" *ngIf="parceiro.conexaoId == 1">
+
+                        </div>
 
 
-<form #form="ngForm" class="was-validaded" class="container" class="my-4">
-    <div class="my-3" class="col-6">
-<label for="nome" class="form-label">Nome<span class="text-danger">*</span></label>
-<input type="text" class="form-control" id="nome" name="nome" #nome="ngModel"
-    [(ngModel)]="parceiro.nome" required>
-<div *ngIf="nome.errors && nome.touched">
-    <p class="text-danger" *ngIf="nome.errors['required']">Esse campo é inválido</p>
-</div>
-    </div>
-    <div class="my-3" class="col-6">
-<label for="codigo" class="form-label">Código <span class="text-danger">*</span></label>
-<input type="number" class="form-control" id="codigo" name="codigo" #codigo="ngModel"
-    [(ngModel)]="parceiro.codigo" required>
-<div *ngIf="codigo.errors && codigo.touched">
-    <p class="text-danger" *ngIf="codigo.errors['required']">Esse campo é inválido</p>
-</div>
-    </div>
-<div class="my-3" class="col-6">
-    <label for="conexaoId" class="form-label" class="my-3">Tipo de conexão<span
-    class="text-danger">*</span></label>
-    <select class="form-select" id="conexaoId" name="conexaoId" #conexaoId="ngModel"
-[(ngModel)]="parceiro.conexaoId" required>
-<option value="{{undefined}}">Selecione</option>
-<option>teste</option>
+                        <div id="Ativa" *ngIf="parceiro.conexaoId == 2">
+                            <div class="row form-group justify-content-start">
+                                <div class="col-6 ">
+                                    <label for="conexaoHost" class="form-label my-1">Host<span
+                                            class="text-danger">*</span></label>
+                                    <input type="text" class="form-control" id="conexaoHost" name="conexaoHost"
+                                        #conexaoHost="ngModel" [(ngModel)]="parceiro.conexaoHost" required>
+                                    <div *ngIf="conexaoHost.errors && conexaoHost.touched">
+                                        <p class="text-danger" *ngIf="conexaoHost.errors['required']">Esse campo é
+                                            inválido
+                                        </p>
+                                    </div>
+                                </div>
 
-    </select>
-    <div *ngIf="conexaoId.errors && conexaoId.touched">
-<p class="text-danger" *ngIf="conexaoId.errors['required']">Esse campo é inválido</p>
-    </div>
-</div>
+                                <div class="my-3" class="col-2">
+                                    <label for="conexaoPorta" class="form-label my-1">Porta<span
+                                            class="text-danger">*</span></label>
+                                    <input type="text" name="conexaoPorta" id="conexaoPorta" class="form-control"
+                                        #conexaoPorta="ngModel" [(ngModel)]="parceiro.conexaoPorta" required>
+                                    <div *ngIf="conexaoPorta.errors && conexaoPorta.touched">
+                                        <p class="text-danger" *ngIf="conexaoPorta.errors['required']">Este campo é
+                                            inválido
+                                        </p>
+                                    </div>
 
-<div id="Passiva" *ngIf="parceiro.conexaoId == 1">
+                                </div>
 
-</div>
-<div id="Ativa" *ngIf="parceiro.conexaoId == 2" class="my-3">
-    <div class="my-3" class="col-6">
-<label for="conexaoHost" class="form-label">Host<span
-class="text-danger">*</span></label>
-<input type="text" class="form-control" id="conexaoHost" name="conexaoHost"
-    #conexaoHost="ngModel" [(ngModel)]="parceiro.conexaoHost" required>
-<div *ngIf="conexaoHost.errors && conexaoHost.touched">
-    <p class="text-danger" *ngIf="conexaoHost.errors['required']">Esse campo é inválido
-    </p>
-</div>
-    </div>
-    </div>
-    <div class="my-3" class="col-6">
-<label for="conexaoPorta" class="form-label">Porta<span
-class="text-danger">*</span></label>
-<input type="text" name="conexaoPorta" id="conexaoPorta" class="form-control"
-    #conexaoPorta="ngModel" [(ngModel)]="parceiro.conexaoPorta" required>
-<div *ngIf="conexaoPorta.errors && conexaoPorta.touched">
-    <p class="text-danger" *ngIf="conexaoPorta.errors['required']">Este campo é inválido
-    </p>
-</div>
-    </div>
-    <div class="my-3" class="col-6">
-<label for="usuario" class="form-label">Usuário<span
-class="text-danger">*</span></label>
-<input type="text" class="form-control" name="usuario" id="usuario" #usuario="ngModel"
-    [(ngModel)]="parceiro.usuario" required>
-<div *ngIf="usuario.errors && usuario.touched">
-    <p class="text-danger" *ngIf="usuario.errors['required']">Este campo é inválido </p>
-</div>
-    </div>
-    <div class="my-3" class="col-6">
-<label for="autenticaoId" class="form-label">Tipo Autenticação<span
-class="text-danger">*</span></label>
-<select class="form-select" id="autenticacaoId" name="autenticacaoId"
-    #autenticacaoId="ngModel" [(ngModel)]="parceiro.autenticacaoId" required>
-    <option value="{{undefined}}">Selecione</option>
-    <option>ttesre</option>
-</select>
-<div *ngIf="autenticacaoId.errors && autenticacaoId.touched">
-    <p class="text-danger" *ngIf="autenticacaoId.errors['required']">Este campo é
-inválido</p>
-</div>
-    </div>
-    <div class="col-6" id="Senha" *ngIf="parceiro.autenticacaoId == 1">
-<div class="my-3">
-    <label for="senha" class="form-label">Senha<span
-    class="text-danger">*</span></label>
-    <input type="text" class="form-control" name="senha" id="senha" #senha="ngModel"
-[(ngModel)]="parceiro.senha" required>
-</div>
-<div *ngIf="senha.errors && senha.touched">
-    <p class="text-danger" *ngIf="senha.errors['required']">Este campo é inválido</p>
-</div>
-    </div>
 
-    <div class="my-3" id="Chave Pública e Privada" *ngIf="parceiro.autenticacaoId == 2">
-<div class="col-6">
-    <label for="senhaPrivada" class="form-label">Senha Chave Privada<span
-    class="text-danger">*</span></label>
-    <input type="text" class="form-control" name="senhaPrivada" id="senhaPrivada"
-#senhaPrivada="ngModel" [(ngModel)]="parceiro.senhaPrivada" required>
-</div>
-<div *ngIf="senhaPrivada.errors && senhaPrivada.touched">
-    <p class="text-danger" *ngIf="senhaPrivada.errors['required']">Este campo é inválido
-    </p>
-</div>
-<div class="col-6">
-    <label for="chavePrivada" class="form-label">Chave Privada<span
-    class="text-danger">*</span></label>
-    <input type="text" class="form-control" name="chavePrivada" id="chavePrivada"
-#chavePrivada="ngModel" [(ngModel)]="parceiro.chavePrivada" required>
-</div>
-<div *ngIf="chavePrivada.errors && chavePrivada.touched">
-    <p class="text-danger" *ngIf="chavePrivada.errors['required']"> Este campo é
-inválido
-    <p>
-</div>
+                                <div class="my-3" class="col-4">
+                                    <label for="usuario" class="form-label my-1">Usuário<span
+                                            class="text-danger">*</span></label>
+                                    <input type="text" class="form-control" name="usuario" id="usuario"
+                                        #usuario="ngModel" [(ngModel)]="parceiro.usuario" required>
+                                    <div *ngIf="usuario.errors && usuario.touched">
+                                        <p class="text-danger" *ngIf="usuario.errors['required']">Este campo é inválido
+                                        </p>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class=" form-group col-4">
+                                <div class="col-4">
+                                    <label for="autenticaoId" class="form-label my-1">Tipo Autenticação<span
+                                            class="text-danger">*</span></label>
+                                    <select class="form-select" id="autenticacaoId" name="autenticacaoId"
+                                        #autenticacaoId="ngModel" [(ngModel)]="parceiro.autenticacaoId" required>
+                                        <option value="{{undefined}}">Selecione</option>
+                                        <option value="{{item.id}}" *ngFor="let item of tipoAutenticacao">{{item.nome}}
+                                        </option>
+                                    </select>
+                                    <div *ngIf="autenticacaoId.errors && autenticacaoId.touched">
+                                        <p class="text-danger" *ngIf="autenticacaoId.errors['required']">Este campo é
+                                            inválido</p>
+                                    </div>
+                                </div>
+
+                                <div class="col-4 row" *ngIf="parceiro.autenticacaoId == 1">
+                                    <div class="form-group">
+                                        <label for="senha" class="form-label">Senha<span
+                                                class="text-danger">*</span></label>
+                                        <input type="text" class="form-control" name="senha" id="senha" #senha="ngModel"
+                                            [(ngModel)]="parceiro.senha" required>
+                                        <div *ngIf="senha.errors && senha.touched">
+                                            <p class="text-danger" *ngIf="senha.errors['required']">Este campo é
+                                                inválido</p>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div class="col-8 row" *ngIf="parceiro.autenticacaoId == 2">
+                                    <div class="form-group col-6">
+                                        <label for="senhaPrivada" class="form-label ">Senha Chave Privada<span
+                                                class="text-danger">*</span></label>
+                                        <input type="text" class="form-control" name="senhaPrivada" id="senhaPrivada"
+                                            #senhaPrivada="ngModel" [(ngModel)]="parceiro.senhaPrivada" required>
+                                        <div *ngIf="senhaPrivada.errors && senhaPrivada.touched">
+                                            <p class="text-danger" *ngIf="senhaPrivada.errors['required']">Este
+                                                campo é inválido
+                                            </p>
+                                        </div>
+                                    </div>
+                                    <div class="form-group col-6">
+                                        <label for="chavePrivada" class="form-label d-flex">Chave Privada<span
+                                                class="text-danger">*</span></label>
+
+                                        <input type="text" class="form-control" name="chavePrivada" id="chavePrivada"
+                                            #chavePrivada="ngModel" [(ngModel)]="parceiro.chavePrivada" required>
+                                        <div *ngIf="chavePrivada.errors && chavePrivada.touched">
+                                            <p class="text-danger" *ngIf="chavePrivada.errors['required']"> Este
+                                                campo é
+                                                inválido
+                                            <p>
+                                        </div>
+
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </form>
+                </div>
+                <div class="modal-footer height-10px">
+                    <button type="submit" class="btn btn-primary" [disabled]="form.invalid">Salvar</button>
+                </div>
+            </div>
+        </div>
     </div>
-</form>
-    <div class="modal-footer">
-        <button type="submit" class="btn btn-primary" [disabled]="form.invalid">Salvar</button>
-  
-    </div>
+</div>

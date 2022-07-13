@@ -4,6 +4,7 @@ import { Router } from '@angular/router';
 import { ParceirosModel as ParceiroModel } from 'src/app/models/parceiros.model';
 import { TipoAutenticacao } from 'src/app/models/tipo-autenticacao.model';
 import { TipoConexao } from 'src/app/models/tipo-conexao.model';
+import { ParceirosModule } from '../parceiros.module';
 
 
 @Component({
