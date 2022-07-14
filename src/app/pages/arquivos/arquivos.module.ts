@@ -4,12 +4,14 @@ import { ArquivosComponent } from '../arquivos/arquivos.component';
 import { CreateComponent } from './create/create.component';
 import { ArquivosRoutingModule } from './arquivos-routing.module';
 import { ListComponent } from './list/list.component';
+import { ExcluirComponent } from './excluir/excluir.component';
 
 @NgModule({
   declarations: [
-    ListComponent,
+     ListComponent,
     ArquivosComponent,
     CreateComponent,
+    ExcluirComponent,
    
   ],
   imports: [

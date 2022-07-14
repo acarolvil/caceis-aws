@@ -38,10 +38,10 @@
                <td>{{item.dataDaCriacao}}</td>
                <td>{{item.dataDaAlteracao}}</td>
                <td>
-                  <div class="d-flex">
+                  <div class="d-flex justify-content-center">
                      <!-- <a class="btn btn-primary mr-1" routerLink="parceiros/list/editar/{{item.id}}">Editar</a> -->
                      <a class="btn btn-primary mr-1" [routerLink]="['editar', item.id]">Editar</a>
-                     <a class="btn btn-secondary" [routerLink]="['excluir', item.id]">Excluir</a>
+                     <a class="btn btn-secondary mr-1" [routerLink]="['excluir', item.id]">Excluir</a>
                   </div>
                </td>
 

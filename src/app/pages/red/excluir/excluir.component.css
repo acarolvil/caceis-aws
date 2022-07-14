@@ -1,0 +1,20 @@
+.modal{
+    background: #0000006b;
+}
+.modal.show{
+display: block;
+}
+
+.modal-body p{
+    font-size: 20px;
+}
+
+.modal-footer{
+    border: none;
+    align-content: center;
+}
+    
+.modal-dialog {
+    max-width: 420px;
+    margin: 3.75rem auto;
+}

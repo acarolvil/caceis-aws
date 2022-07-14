@@ -1,0 +1,127 @@
+section {
+    width: 80%;
+    max-width: 1480px;
+    margin: 20px auto;
+    ;
+}
+
+
+
+
+h1 {
+    font-weight: bold;
+    font-size: 45px;
+}
+
+.botao {
+    font-weight: 400;
+    font-size: 18px;
+    width: 130px;
+    border-radius: 10px;
+    border-width: 1px;
+    border-color: rgba(0, 0, 0, 0.179);
+    padding: 4px;
+    background-color: white;
+}
+
+
+
+.table {
+    margin: 20px 0;
+    background-color: rgba(0, 0, 0, 0.058);
+}
+
+.table th {
+    color: rgba(0, 0, 0, 0.656);
+    font-weight: 500;
+    font-size: 13px;
+    max-height: 1px;
+    border: 0.5px solid rgba(128, 128, 128, 0.127);
+    background-color: rgba(128, 128, 128, 0.127);
+}
+
+.table td {
+    border: 0.5px solid rgba(0, 0, 0, 0.14);
+}
+
+.table tr:nth-child(even) {
+    background-color: rgb(255, 255, 255);
+}
+
+.formulario {
+    background-color: rgba(0, 0, 0, 0.058);
+    margin-top: 50px;
+    width: 90%;
+
+}
+
+
+
+form {
+    width: 98%;
+    margin-left: 15px;
+    padding-bottom: 70px;
+}
+
+.cont {
+    margin-left: 10px;
+    padding: 10px;
+}
+
+label {
+    font-size: 20px;
+    display: block;
+}
+
+input,
+select {
+    padding: 10px;
+    width: 27%;
+    border-radius: 10px;
+    border-width: 1px;
+    border-color: white;
+}
+
+input:hover,
+select:hover {
+    padding: 10px;
+    width: 27%;
+    border-radius: 10px;
+    border-width: 1px;
+    border-color: rgb(237, 67, 67);
+}
+
+option {
+    font-size: 20px;
+
+
+}
+
+.cont input[type="text"] {
+
+    display: block;
+    color: black;
+    font-size: 18px;
+
+}
+
+.botao__form {
+    margin: 15px 115px;
+    font-weight: 400;
+    font-size: 18px;
+    width: 140px;
+    border-radius: 10px;
+    border-width: 1px;
+    border-color: rgba(0, 0, 0, 0.179);
+    padding: 8px;
+    background-color: white;
+}
+
+.botao__form:hover {
+    box-shadow: 1px 1px 4px rgb(237, 67, 67);
+}
+
+a[class~="btn"]{
+    margin: 1px;
+    padding: 8px;
+}

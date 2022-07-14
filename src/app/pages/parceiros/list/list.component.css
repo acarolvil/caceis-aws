@@ -121,3 +121,8 @@ option {
 .botao__form:hover {
     box-shadow: 1px 1px 4px rgb(237, 67, 67);
 }
+
+a[class~="btn"]{
+    margin: 1px;
+    padding: 8px;
+}

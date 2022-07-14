@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { monitorModel } from 'src/app/models/monitor.model';
 
 @Component({
   selector: 'app-list',

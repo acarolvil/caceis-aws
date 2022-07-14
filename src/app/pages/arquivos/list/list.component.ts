@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { arquivosModel } from 'src/app/models/arquivos.model';
 
 @Component({
   selector: 'app-list',
@@ -13,3 +14,4 @@ export class ListComponent implements OnInit {
   }
 
 }
+

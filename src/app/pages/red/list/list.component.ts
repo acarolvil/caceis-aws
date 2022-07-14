@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { redModel } from 'src/app/models/red.model';
 
 @Component({
   selector: 'app-list',

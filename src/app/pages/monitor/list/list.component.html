@@ -1,1 +1,54 @@
-<p>list works!</p>
+
+
+  <section>
+    <h1 class="titulo">Cadastro de Clientes prd</h1>
+ 
+    <a class="btn btn-primary mr-1" [routerLink]="['cadastrar']">Cadastrar </a>
+ 
+    <div>
+       <table class="table table-responsive">
+          <thead>
+             <tr id="head">
+                <th>id</th>
+                <th>nome</th>
+                <th>código</th>
+                <th>autenticação</th>
+                <th>conexão host</th>
+                <th>conexão porta</th>
+                <th>usuário</th>
+                <th>senha</th>
+                <th>chave privada </th>
+                <th>data da criação</th>
+                <th>data da alteração</th>
+                <th></th>
+             </tr>
+ 
+          </thead>
+          <tbody>
+             <tr>
+                <td>a</td>
+                <td>a</td>
+                <td>a</td>
+                <td>a</td>
+                <td>a</td>
+                <td>a</td>
+                <td>a</td>
+                <td>a</td>
+                <td>a</td>
+                <td>a</td>
+                <td>a</td>
+                <td>a</td>
+                <td>
+                   <div class="d-flex justify-content-center">
+                      <!-- <a class="btn btn-primary mr-1" routerLink="parceiros/list/editar/{{item.id}}">Editar</a> -->
+                      <a class="btn btn-primary mr-1" >Editar</a>
+                      <a class="btn btn-secondary mr-1" [routerLink]="['excluir']">Excluir</a>
+                   </div>
+                </td>
+ 
+             </tr>
+          </tbody>
+       </table>
+    </div>
+ <router-outlet></router-outlet>
+    

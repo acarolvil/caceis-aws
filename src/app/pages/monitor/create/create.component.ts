@@ -1,4 +1,7 @@
 import { Component, OnInit } from '@angular/core';
+import { NgForm } from '@angular/forms';
+import { Router } from '@angular/router';
+import { monitorModel } from 'src/app/models/monitor.model';
 
 @Component({
   selector: 'app-create',
@@ -7,9 +10,19 @@ import { Component, OnInit } from '@angular/core';
 })
 export class CreateComponent implements OnInit {
 
-  constructor() { }
+  modalOpen = false;
+  constructor( private router: Router) { }
 
   ngOnInit(): void {
+    this.modalOpen = true
+  }
+
+  
+
+  voltar(){
+    this.modalOpen=false;
+    this.router.navigate(["monitor", "list"])
+
   }
 
 }
