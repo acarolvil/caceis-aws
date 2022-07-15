@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { arquivosModel } from 'src/app/models/arquivos.model';
+import { arquivosModel as ArquivosModel } from 'src/app/models/arquivos.model';
 
 @Component({
   selector: 'app-list',
@@ -8,10 +8,30 @@ import { arquivosModel } from 'src/app/models/arquivos.model';
 })
 export class ListComponent implements OnInit {
 
-  constructor() { }
+  list: ArquivosModel[]=[];
+  selected?: ArquivosModel;
+
+  constructor() { 
+    this.list=[
+      {id: 2, nome: 'Exem', permitida: 'true'},
+      {id: 2, nome: 'Exem', permitida: 'true'},
+      {id: 2, nome: 'Exem', permitida: 'true'},
+      {id: 2, nome: 'Exem', permitida: 'true'},
+      {id: 2, nome: 'Exem', permitida: 'true'},
+
+    ]
+  }
 
   ngOnInit(): void {
   }
 
+  selecionar(item: ArquivosModel){
+    if (item == this.selected) {
+this.selected = undefined
+    } else {
+      this.selected = item;
+
+    }
+  }
 }
 

@@ -5,6 +5,7 @@ import { RedRoutingModule } from './red-routing.module';
 import { CreateComponent } from './create/create.component';
 import { ListComponent } from './list/list.component';
 import { ExcluirComponent } from './excluir/excluir.component';
+import { EditComponent } from './edit/edit.component';
 
 
 @NgModule({
@@ -12,7 +13,8 @@ import { ExcluirComponent } from './excluir/excluir.component';
     RedComponent,
     ListComponent,
     CreateComponent,
-    ExcluirComponent
+    ExcluirComponent,
+    EditComponent
 
     
   ],

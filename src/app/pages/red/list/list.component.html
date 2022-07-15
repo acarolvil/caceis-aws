@@ -1,7 +1,7 @@
 
 
   <section>
-    <h1 class="titulo">Cadastro de Clientes prd</h1>
+    <h1 class="titulo">Redirecionamento automático prd</h1>
  
     <a class="btn btn-primary mr-1" [routerLink]="['cadastrar']">Cadastrar </a>
  
@@ -10,34 +10,25 @@
           <thead>
              <tr id="head">
                 <th>id</th>
-                <th>nome</th>
-                <th>código</th>
-                <th>autenticação</th>
-                <th>conexão host</th>
-                <th>conexão porta</th>
-                <th>usuário</th>
-                <th>senha</th>
-                <th>chave privada </th>
-                <th>data da criação</th>
-                <th>data da alteração</th>
-                <th></th>
+                <th>código do cliente(from)</th>
+                <th>código do cliente(to)</th>
+                <th>prefixo</th>
+                <th>palavra chave 1</th>
+                <th>palavra chave 2</th>
+                <th>observações</th>
+               
              </tr>
  
           </thead>
           <tbody>
-             <tr>
-                <td>a</td>
-                <td>a</td>
-                <td>a</td>
-                <td>a</td>
-                <td>a</td>
-                <td>a</td>
-                <td>a</td>
-                <td>a</td>
-                <td>a</td>
-                <td>a</td>
-                <td>a</td>
-                <td>a</td>
+             <tr *ngFor="let item of list">
+                <td>{{item.id}}</td>
+                <td>{{item.codClienteFrom}}</td>
+                <td>{{item.codClienteTo}}</td>
+                <td>{{item.prefixo}}</td>
+                <td>{{item.palavraChave1}}</td>
+                <td>{{item.palavraChave2}}</td>
+                <td>{{item.observacoes}}</td>
                 <td>
                    <div class="d-flex justify-content-center">
                       <!-- <a class="btn btn-primary mr-1" routerLink="parceiros/list/editar/{{item.id}}">Editar</a> -->

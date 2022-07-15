@@ -51,7 +51,7 @@ h1 {
 .formulario {
     background-color: rgba(0, 0, 0, 0.058);
     margin-top: 50px;
-    width: 90%;
+    width: 80%;
 
 }
 
@@ -124,4 +124,13 @@ option {
 a[class~="btn"]{
     margin: 1px;
     padding: 8px;
+}
+
+tbody tr:hover{
+    background-color: rgba(255, 0, 0, 0.641)!important;
+}
+
+
+tr.selected {
+    background: rgba(255, 0, 0, 0.641)!important;
 }

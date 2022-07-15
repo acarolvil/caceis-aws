@@ -6,7 +6,39 @@
           <button type="button" class="close" (click)="voltar()"> <span aria-hidden="true">&times;</span></button>
         </div>
         <div class="modal-body">
-          <p>Modal body text goes here.</p>
+          <form action="" class="container">
+            <div class="row">
+            <div class="form-group col-md-6" >
+              <label for="" class="form-label">Código do cliente(from)</label>
+              <input type="text" class="form-control">
+            </div>
+            <div class="form-group col-6">
+              <label for="" class="form-label">Código de cliente(to)</label>
+              <input type="text" class="form-control">
+            </div>
+            
+          </div>
+          <div class="row my-3">
+            <div class="form-group col-4">
+              <label for="" class="form-label">Prefixo</label>
+              <input type="text" class="form-control">
+            </div>
+          
+            <div class="form-group col-4 ">
+              <label for="" class="form-label">Palavra chave 1</label>
+              <input type="text" class="form-control">
+            </div>
+            <div class="form-group col-4 ">
+              <label for="" class="form-label">Palavra chave 1</label>
+              <input type="text" class="form-control">
+            </div>
+          
+        </div>
+        <div class="form-group">
+          <label for="" class="form-label">Observações</label><br>
+          <textarea name="" id="" cols="120" rows="8"></textarea>
+        </div>
+          </form>
         </div>
         <div class="modal-footer">
           <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>

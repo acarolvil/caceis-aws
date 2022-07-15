@@ -9,11 +9,13 @@ import { ExcluirComponent } from './excluir/excluir.component';
 
 
 
+
 @NgModule({
   declarations: [
     ListComponent,
     MonitorComponent,
     ExcluirComponent,
+   
     
     
     

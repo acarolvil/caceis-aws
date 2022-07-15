@@ -4,3 +4,38 @@
 .modal.show{
 display: block;
 }
+
+.modal-content{
+    
+    max-width: 90%;
+    min-width: 50vw;
+    width: unset;
+   
+   
+}
+
+form{
+    display: flex;
+    flex-flow: column;
+    justify-content: center;
+}
+
+
+
+
+.modal-dialog{
+        background-color: rgba(128, 128, 128, 0.316);
+        height: 100vh;
+        margin: 0;
+        max-width: 100% !important;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+   
+}
+
+textarea{
+    border-color:rgba(128, 128, 128, 0.316);
+}
+
+

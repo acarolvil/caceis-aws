@@ -4,3 +4,43 @@
 .modal.show{
 display: block;
 }
+
+.modal-content{
+    
+    max-width: 90%;
+    min-width: 40%;
+    width: unset;
+   
+   
+}
+
+form{
+    display: flex;
+    flex-flow: column;
+    justify-content: center;
+}
+
+
+
+
+.modal-dialog{
+        background-color: rgba(128, 128, 128, 0.316);
+        height: 100vh;
+        margin: 0;
+        max-width: 100% !important;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+   
+}
+h1{
+   color: rgba(0, 0, 0, 0.773) ;
+    font-size: 18px;
+    margin-top: 15px;
+    border-bottom: 1px solid rgba(0, 0, 0, 0.227);
+}
+textarea{
+    border-color:rgba(128, 128, 128, 0.316);
+}
+
+

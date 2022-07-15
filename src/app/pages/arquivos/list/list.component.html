@@ -2,7 +2,7 @@
 
 
   <section>
-    <h1 class="titulo">Cadastro de Clientes prd</h1>
+    <h1 class="titulo">Arquivos permitidos prd</h1>
  
     <a class="btn btn-primary mr-1" [routerLink]="['cadastrar']">Cadastrar </a>
  
@@ -10,35 +10,19 @@
        <table class="table table-responsive">
           <thead>
              <tr id="head">
+                <th></th>
                 <th>id</th>
                 <th>nome</th>
-                <th>código</th>
-                <th>autenticação</th>
-                <th>conexão host</th>
-                <th>conexão porta</th>
-                <th>usuário</th>
-                <th>senha</th>
-                <th>chave privada </th>
-                <th>data da criação</th>
-                <th>data da alteração</th>
-                <th></th>
+                <th>permitida</th>
              </tr>
  
           </thead>
           <tbody>
-             <tr>
-                <td>a</td>
-                <td>a</td>
-                <td>a</td>
-                <td>a</td>
-                <td>a</td>
-                <td>a</td>
-                <td>a</td>
-                <td>a</td>
-                <td>a</td>
-                <td>a</td>
-                <td>a</td>
-                <td>a</td>
+             <tr *ngFor="let item of list" (click)="selecionar(item)" [class.selected]="selected == item" >
+                <td><input type="checkbox" [checked]="selected == item"></td>
+                <td>{{item.id}}</td>
+                <td>{{item.nome}}</td>
+                <td>{{item.permitida}}</td>
                 <td>
                    <div class="d-flex justify-content-center">
                       <!-- <a class="btn btn-primary mr-1" routerLink="parceiros/list/editar/{{item.id}}">Editar</a> -->

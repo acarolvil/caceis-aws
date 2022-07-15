@@ -1,7 +1,7 @@
 
 
   <section>
-    <h1 class="titulo">Cadastro de Clientes prd</h1>
+    <h1 class="titulo">Monitor de tranferência prd</h1>
  
     <a class="btn btn-primary mr-1" [routerLink]="['cadastrar']">Cadastrar </a>
  
@@ -10,35 +10,30 @@
           <thead>
              <tr id="head">
                 <th>id</th>
-                <th>nome</th>
-                <th>código</th>
-                <th>autenticação</th>
-                <th>conexão host</th>
-                <th>conexão porta</th>
-                <th>usuário</th>
-                <th>senha</th>
-                <th>chave privada </th>
-                <th>data da criação</th>
-                <th>data da alteração</th>
-                <th></th>
+                <th>transferência de status</th>
+                <th>tipo de transferência</th>
+                <th>data e hora inicial</th>
+                <th>data e hora final</th>
+                <th>bucket de origem</th>
+                <th>bucket de destino</th>
+                <th>nome do arquivo</th>
+                <th>observações</th>
              </tr>
  
           </thead>
           <tbody>
-             <tr>
-                <td>a</td>
-                <td>a</td>
-                <td>a</td>
-                <td>a</td>
-                <td>a</td>
-                <td>a</td>
-                <td>a</td>
-                <td>a</td>
-                <td>a</td>
-                <td>a</td>
-                <td>a</td>
-                <td>a</td>
-                <td>
+             <tr *ngFor="let item of list" >
+           
+                <td>{{item.id}}</td>
+                <td>{{item.transStatus}}</td>
+                <td>{{item.tipoTransferencia}}</td>
+                <td>{{item.dataHoraInicial}}</td>
+                <td>{{item.dataHoraFinal}}</td>
+                <td>{{item.bucketOrigem}}</td>
+                <td>{{item.bucketDestino}}</td>
+                <td>{{item.nomeArquivo}}</td>
+                <td>{{item.observacoes}}</td>
+          <td>
                    <div class="d-flex justify-content-center">
                       <!-- <a class="btn btn-primary mr-1" routerLink="parceiros/list/editar/{{item.id}}">Editar</a> -->
                       <a class="btn btn-primary mr-1" >Editar</a>
