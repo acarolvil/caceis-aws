@@ -8,7 +8,7 @@ import { ParceirosComponent } from './parceiros.component';
 
 
 const routes: Routes = [
-  { path: '', component: ListComponent },
+ 
   { path: 'list', component: ListComponent, children: [
     { path: 'editar/:id', component: EditComponent},
     { path: 'cadastrar', component: CreateComponent},

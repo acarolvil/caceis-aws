@@ -24,7 +24,9 @@ import { ExcluirComponent } from './excluir/excluir.component';
     ParceirosRoutingModule,
     FormsModule,
     FontAwesomeModule,
-  ]
+  ],
+
+  bootstrap: [ParceirosComponent]
 })
 
 export class ParceirosModule { }
