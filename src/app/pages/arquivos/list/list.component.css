@@ -27,8 +27,11 @@ h1 {
 
 
 .table {
-    margin: 20px 0;
+    margin: 20px auto;
     background-color: rgba(0, 0, 0, 0.058);
+   
+    
+    
 }
 
 .table th {
@@ -133,4 +136,9 @@ tbody tr:hover{
 
 tr.selected {
     background: rgba(255, 0, 0, 0.641)!important;
+}
+
+.td-wid{
+ 
+    max-width: 30px;
 }

@@ -2,27 +2,24 @@ import { Component, OnInit } from '@angular/core';
 import { NgForm } from '@angular/forms';
 import { Router } from '@angular/router';
 
-
 @Component({
   selector: 'app-excluir',
   templateUrl: './excluir.component.html',
   styleUrls: ['./excluir.component.css']
 })
 export class ExcluirComponent implements OnInit {
-
-  modalOpen =  false
+  
+  modalOpen = false 
   
   constructor(private router: Router) { }
 
   ngOnInit(): void {
-    this.modalOpen = true;
-
+    this.modalOpen = true
   }
 
   voltar(){
-    this.modalOpen = false;
-    this.router.navigate(["parceiros","list"])
-
+    this.modalOpen = true;
+    this.router.navigate(["red"])
   }
 
 }

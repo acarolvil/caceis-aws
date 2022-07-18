@@ -1,7 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { NgForm } from '@angular/forms';
 import { Router } from '@angular/router';
-import { monitorModel } from 'src/app/models/monitor.model';
+import { arquivosModel } from 'src/app/models/arquivos.model';
 
 @Component({
   selector: 'app-create',
@@ -21,7 +21,7 @@ export class CreateComponent implements OnInit {
 
   voltar(){
     this.modalOpen=false;
-    this.router.navigate(["monitor", "list"])
+    this.router.navigate(["arquivos"])
 
   }
 

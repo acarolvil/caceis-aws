@@ -42,6 +42,7 @@ h1 {
 
 .table td {
     border: 0.5px solid rgba(0, 0, 0, 0.14);
+    padding: 15px;
 }
 
 .table tr:nth-child(even) {
@@ -57,6 +58,7 @@ h1 {
 
 
 
+
 form {
     width: 98%;
     margin-left: 15px;
@@ -65,7 +67,7 @@ form {
 
 .cont {
     margin-left: 10px;
-    padding: 10px;
+    padding: 50px;
 }
 
 label {
@@ -73,23 +75,6 @@ label {
     display: block;
 }
 
-input,
-select {
-    padding: 10px;
-    width: 27%;
-    border-radius: 10px;
-    border-width: 1px;
-    border-color: white;
-}
-
-input:hover,
-select:hover {
-    padding: 10px;
-    width: 27%;
-    border-radius: 10px;
-    border-width: 1px;
-    border-color: rgb(237, 67, 67);
-}
 
 option {
     font-size: 20px;
@@ -125,3 +110,5 @@ a[class~="btn"]{
     margin: 1px;
     padding: 8px;
 }
+
+

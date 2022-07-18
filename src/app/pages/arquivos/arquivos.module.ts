@@ -6,6 +6,7 @@ import { ArquivosRoutingModule } from './arquivos-routing.module';
 import { ListComponent } from './list/list.component';
 import { ExcluirComponent } from './excluir/excluir.component';
 import { FormsModule } from '@angular/forms';
+import { EditComponent } from './edit/edit.component';
 
 @NgModule({
   declarations: [
@@ -13,12 +14,17 @@ import { FormsModule } from '@angular/forms';
     ArquivosComponent,
     CreateComponent,
     ExcluirComponent,
+    EditComponent,
    
   ],
   imports: [
     CommonModule,
     ArquivosRoutingModule,
-    FormsModule
+    FormsModule,
+  ],
+
+  bootstrap:[
+    ArquivosComponent,
   ]
 })
 export class ArquivosModule { }

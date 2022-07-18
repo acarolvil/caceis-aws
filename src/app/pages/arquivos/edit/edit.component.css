@@ -8,7 +8,7 @@ display: block;
 .modal-content{
     
     max-width: 90%;
-    min-width: 50vw;
+    min-width: 30%;
     width: unset;
    
    
@@ -32,10 +32,6 @@ form{
         align-items: center;
         justify-content: center;
    
-}
-
-textarea{
-    border-color:rgba(128, 128, 128, 0.316);
 }
 
 

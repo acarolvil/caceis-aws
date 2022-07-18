@@ -1,4 +1,7 @@
 import { Component, OnInit } from '@angular/core';
+import { NgForm } from '@angular/forms';
+import { Router } from '@angular/router';
+import { redModel } from 'src/app/models/red.model';
 
 @Component({
   selector: 'app-edit',
@@ -7,9 +10,19 @@ import { Component, OnInit } from '@angular/core';
 })
 export class EditComponent implements OnInit {
 
-  constructor() { }
+  modalOpen = false;
+  constructor( private router: Router) { }
 
   ngOnInit(): void {
+    this.modalOpen = true
+  }
+
+  
+
+  voltar(){
+    this.modalOpen=false;
+    this.router.navigate(["red"])
+
   }
 
 }

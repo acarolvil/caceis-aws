@@ -5,9 +5,11 @@ import { ParceirosRoutingModule } from './parceiros-routing.module';
 import { ParceirosComponent } from './parceiros.component';
 import { CreateComponent } from './create/create.component';
 import { ListComponent } from './list/list.component';
-import { EditComponent } from './edit/edit.component';
+
 import { FormsModule } from '@angular/forms';
+import { EditComponent } from './edit/edit.component';
 import { ExcluirComponent } from './excluir/excluir.component';
+
 
 
 @NgModule({
@@ -17,6 +19,7 @@ import { ExcluirComponent } from './excluir/excluir.component';
     CreateComponent,
     EditComponent,
     ExcluirComponent,
+    
   ],
   
   imports: [
@@ -26,7 +29,7 @@ import { ExcluirComponent } from './excluir/excluir.component';
     FontAwesomeModule,
   ],
 
-  bootstrap: [ParceirosComponent]
+  bootstrap: [ParceirosComponent],
 })
 
 export class ParceirosModule { }

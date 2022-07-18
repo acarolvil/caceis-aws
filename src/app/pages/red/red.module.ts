@@ -5,7 +5,8 @@ import { RedRoutingModule } from './red-routing.module';
 import { CreateComponent } from './create/create.component';
 import { ListComponent } from './list/list.component';
 import { ExcluirComponent } from './excluir/excluir.component';
-import { EditComponent } from './edit/edit.component';
+import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
+
 
 
 @NgModule({
@@ -14,13 +15,16 @@ import { EditComponent } from './edit/edit.component';
     ListComponent,
     CreateComponent,
     ExcluirComponent,
-    EditComponent
+    
+   
 
     
   ],
   imports: [
     CommonModule,
     RedRoutingModule,
-  ]
+    FontAwesomeModule,
+  ],
+  bootstrap: [RedComponent]
 })
 export class RedModule { }

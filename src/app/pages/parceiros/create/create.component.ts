@@ -47,7 +47,7 @@ export class CreateComponent implements OnInit {
 
   voltar(){
     this.modalOpen = false;
-    this.router.navigate(["parceiros","list"])
+    this.router.navigate(["parceiros"])
   }
 
 }

@@ -19,7 +19,7 @@ export class ExcluirComponent implements OnInit {
 
   voltar(){
     this.modalOpen = true;
-    this.router.navigate(["arquivos","list"])
+    this.router.navigate(["arquivos"])
   }
 
 }

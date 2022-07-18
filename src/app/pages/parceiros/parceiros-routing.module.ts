@@ -9,7 +9,7 @@ import { ParceirosComponent } from './parceiros.component';
 
 const routes: Routes = [
  
-  { path: 'list', component: ListComponent, children: [
+  { path: '', component: ListComponent, children: [
     { path: 'editar/:id', component: EditComponent},
     { path: 'cadastrar', component: CreateComponent},
     { path: 'excluir/:id', component: ExcluirComponent},

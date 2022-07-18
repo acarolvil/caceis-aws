@@ -19,7 +19,7 @@ export class ExcluirComponent implements OnInit {
 
   voltar(){
     this.modalOpen = true;
-    this.router.navigate(["red","list"])
+    this.router.navigate(["red"])
   }
 
 }

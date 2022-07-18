@@ -4,12 +4,15 @@ import { RedComponent } from './red.component';
 import { CreateComponent } from './create/create.component';
 import { ListComponent } from './list/list.component';
 import { ExcluirComponent } from './excluir/excluir.component';
+import { EditComponent } from './edit/edit.component';
 
 const routes: Routes =[
-    {path: '', component: RedComponent},
-    { path: 'list', component: ListComponent, children:[
+    // {path: '', component: RedComponent},
+    { path: '', component: ListComponent, children:[
         {path: 'cadastrar', component: CreateComponent},
-        {path: 'excluir', component: ExcluirComponent}
+        {path: 'editar', component: EditComponent},
+        {path: 'excluir', component: ExcluirComponent},
+       
 
     ]}
 ]

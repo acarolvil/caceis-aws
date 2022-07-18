@@ -2,34 +2,38 @@
     <div class="modal-dialog">
       <div class="modal-content">
         <div class="modal-header">
-          <h5 class="modal-title">Modal title</h5>
-          <button type="button" class="close" (click)="voltar()"> <span aria-hidden="true">&times;</span></button>
+          <h5 class="modal-title">Cadastrar redirecionamento</h5>
+          <button type="button" (click)="voltar()"> <i class="fa-solid fa-x"></i> </button>
         </div>
         <div class="modal-body">
           <form action="" class="container">
             <div class="row">
-            <div class="form-group col-md-6" >
+            <div class="form-group col-md-4" >
               <label for="" class="form-label">Código do cliente(from)</label>
               <input type="text" class="form-control">
             </div>
-            <div class="form-group col-6">
+            <div class="form-group col-4">
               <label for="" class="form-label">Código de cliente(to)</label>
               <input type="text" class="form-control">
             </div>
-            
-          </div>
-          <div class="row my-3">
-            <div class="form-group col-4">
-              <label for="" class="form-label">Prefixo</label>
-              <input type="text" class="form-control">
-            </div>
           
+              <div class="form-group col-4">
+                <label for="" class="form-label">Prefixo</label>
+                <input type="text" class="form-control">
+              </div>
+          </div>
+          
+          <div class="row my-3">
             <div class="form-group col-4 ">
               <label for="" class="form-label">Palavra chave 1</label>
               <input type="text" class="form-control">
             </div>
             <div class="form-group col-4 ">
-              <label for="" class="form-label">Palavra chave 1</label>
+              <label for="" class="form-label">Palavra chave 2 </label>
+              <input type="text" class="form-control">
+            </div>
+            <div class="form-group col-4 ">
+              <label for="" class="form-label">Palavra chave 3</label>
               <input type="text" class="form-control">
             </div>
           
@@ -41,8 +45,8 @@
           </form>
         </div>
         <div class="modal-footer">
-          <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
-          <button type="button" class="btn btn-primary">Save changes</button>
+         
+          <button type="button" class="btn btn-primary">Salvar</button>
         </div>
       </div>
     </div>

@@ -1,8 +1,9 @@
+
 <div class="modal" [class.show]="modalOpen" [class.fade]="!modalOpen">
     <div class="modal-dialog">
       <div class="modal-content">
         <div class="modal-header">
-          <h5 class="modal-title">Cadastrar extensão</h5>
+          <h5 class="modal-title">Editar extensão</h5>
           <button type="button" class="close" (click)="voltar()"> <span aria-hidden="true">&times;</span></button>
         </div>
         <div class="modal-body">
@@ -11,19 +12,11 @@
               <label for="" class="form-label">Extensão</label>
               <input type="text" class="form-control">
             </div>
-            <div class="form-group">
-          
-              <input type="checkbox" class="my-2 checkbox form-check-input">
-              <label for="" class="form-label teste">Permitidas</label>
-            </div>
-   
-          
           </form>
-
         </div>
         <div class="modal-footer">
           
-          <button type="button" class="btn btn-primary">Salvar</button>
+          <button type="button" class="btn btn-primary">Save changes</button>
         </div>
       </div>
     </div>

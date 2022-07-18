@@ -4,7 +4,7 @@ import { MonitorComponent } from './monitor.component';
 import { MonitorRoutingModule } from './monitor-routing.module';
 import { CreateComponent } from './create/create.component';
 import { ListComponent } from './list/list.component';
-import { ExcluirComponent } from './excluir/excluir.component';
+
 
 
 
@@ -14,7 +14,7 @@ import { ExcluirComponent } from './excluir/excluir.component';
   declarations: [
     ListComponent,
     MonitorComponent,
-    ExcluirComponent,
+ 
    
     
     

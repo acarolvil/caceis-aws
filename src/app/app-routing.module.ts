@@ -10,10 +10,10 @@ const arquivosModule = () => import('./pages/arquivos/arquivos.module').then( re
 const monitorModule = () => import ('./pages/monitor/monitor.module').then( res => res.MonitorModule)
 const redModule = () => import ('./pages/red/red.module').then(res => res.RedModule)
 const routes: Routes = [
-  { path: 'parceiros', loadChildren: pessoaModule },
-  { path: 'arquivos', loadChildren: arquivosModule},
-  { path: 'monitor', loadChildren: monitorModule},
-  {path: 'red', loadChildren: redModule},
+  { path: 'cadastro-de-parceiros', loadChildren: pessoaModule },
+  { path: 'arquivos-permitidos', loadChildren: arquivosModule},
+  { path: 'monitor-de-transferencias', loadChildren: monitorModule},
+  {path: 'redirecionamento-automatico', loadChildren: redModule},
 
 
 
