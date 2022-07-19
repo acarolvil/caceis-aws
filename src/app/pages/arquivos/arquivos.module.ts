@@ -7,6 +7,7 @@ import { ListComponent } from './list/list.component';
 import { ExcluirComponent } from './excluir/excluir.component';
 import { FormsModule } from '@angular/forms';
 import { EditComponent } from './edit/edit.component';
+import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
 
 @NgModule({
   declarations: [
@@ -21,6 +22,7 @@ import { EditComponent } from './edit/edit.component';
     CommonModule,
     ArquivosRoutingModule,
     FormsModule,
+    FontAwesomeModule,
   ],
 
   bootstrap:[

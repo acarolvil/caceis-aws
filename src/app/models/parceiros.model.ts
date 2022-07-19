@@ -8,8 +8,8 @@ export class ParceirosModel {
     conexaoPorta: any;
     usuario: string = '';
     senha: string = '';
-    senhaPrivada: any= '';
-    chavePrivada: any= '';
+    senhaPrivada: string= '';
+    chavePrivada: any;
     dataDaCriacao: any;
     dataDaAlteracao: any;
     autenticacao: string='';

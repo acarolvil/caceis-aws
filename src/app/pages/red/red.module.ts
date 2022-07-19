@@ -6,6 +6,7 @@ import { CreateComponent } from './create/create.component';
 import { ListComponent } from './list/list.component';
 import { ExcluirComponent } from './excluir/excluir.component';
 import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
+import { EditComponent } from './edit/edit.component';
 
 
 
@@ -15,6 +16,7 @@ import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
     ListComponent,
     CreateComponent,
     ExcluirComponent,
+    EditComponent,
     
    
 

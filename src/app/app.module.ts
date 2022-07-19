@@ -8,6 +8,12 @@ import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
 import { FooterComponent } from './parts/footer/footer.component';
 import { FormsModule } from '@angular/forms';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import { IconsModule } from './icons/icons.module';
+import {TableModule} from 'primeng/table';
+import { HttpClient, HttpClientModule } from '@angular/common/http';
+import { PaginatorModule } from 'primeng/paginator';
+
+
 @NgModule({
   declarations: [
     AppComponent,
@@ -19,8 +25,13 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
     BrowserModule,
     BrowserAnimationsModule,
     AppRoutingModule,
-    FontAwesomeModule,
+    IconsModule,
     FormsModule,
+ 
+    HttpClientModule,
+    TableModule,
+    PaginatorModule,
+    
     
   ],
   providers: [],

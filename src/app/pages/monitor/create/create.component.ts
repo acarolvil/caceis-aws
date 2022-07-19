@@ -21,7 +21,7 @@ export class CreateComponent implements OnInit {
 
   voltar(){
     this.modalOpen=false;
-    this.router.navigate(["monitor"])
+    this.router.navigate(["monitor-de-transferencias"])
 
   }
 

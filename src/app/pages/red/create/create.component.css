@@ -38,5 +38,9 @@ textarea{
     border-color:rgba(128, 128, 128, 0.316);
 }
 
+.icone{
+    border: none;
+   color: rgba(0, 0, 0, 0.517);
+}
 
 

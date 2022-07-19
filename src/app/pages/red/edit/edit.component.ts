@@ -2,6 +2,8 @@ import { Component, OnInit } from '@angular/core';
 import { NgForm } from '@angular/forms';
 import { Router } from '@angular/router';
 import { redModel } from 'src/app/models/red.model';
+import { faTimes } from '@fortawesome/free-solid-svg-icons';
+
 
 @Component({
   selector: 'app-edit',
@@ -9,7 +11,7 @@ import { redModel } from 'src/app/models/red.model';
   styleUrls: ['./edit.component.css']
 })
 export class EditComponent implements OnInit {
-
+  faTimes = faTimes;
   modalOpen = false;
   constructor( private router: Router) { }
 
@@ -21,7 +23,7 @@ export class EditComponent implements OnInit {
 
   voltar(){
     this.modalOpen=false;
-    this.router.navigate(["red"])
+    this.router.navigate(["redirecionamento-automatico"])
 
   }
 

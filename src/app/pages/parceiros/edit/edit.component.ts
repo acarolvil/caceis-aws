@@ -47,7 +47,7 @@ export class EditComponent implements OnInit {
 
   voltar(){
     this.modalOpen = false;
-    this.router.navigate(["parceiros"])
+    this.router.navigate(["cadastro-de-parceiros"])
   }
 
 }

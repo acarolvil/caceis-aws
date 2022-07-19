@@ -3,9 +3,9 @@
     <div class="modal-content">
       <div class="modal-header">
         <h5 class="modal-title">Edição de parceiros</h5>
-        <button type="button" class="close" (click)="voltar()">
-          <span aria-hidden="true">&times;</span>
-        </button>
+        <span class="btn" (click)="voltar()">
+          <fa-icon [icon]="['fas', 'x']" class="icone"></fa-icon>
+        </span>
       </div>
       <div class="modal-body">
         <form #form="ngForm" class="was-validaded" class="container" class="my-4" (ngSubmit)="send(form)">

@@ -5,6 +5,8 @@ import { ParceirosModel as ParceiroModel } from 'src/app/models/parceiros.model'
 import { TipoAutenticacao } from 'src/app/models/tipo-autenticacao.model';
 import { TipoConexao } from 'src/app/models/tipo-conexao.model';
 import { ParceirosModule } from '../parceiros.module';
+import { HttpClient } from '@angular/common/http';
+import { Injectable } from '@angular/core';
 
 
 @Component({
@@ -47,7 +49,7 @@ export class CreateComponent implements OnInit {
 
   voltar(){
     this.modalOpen = false;
-    this.router.navigate(["parceiros"])
+    this.router.navigate(["cadastro-de-parceiros"])
   }
 
 }

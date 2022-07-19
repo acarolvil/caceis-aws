@@ -4,6 +4,7 @@ import { MonitorComponent } from './monitor.component';
 import { MonitorRoutingModule } from './monitor-routing.module';
 import { CreateComponent } from './create/create.component';
 import { ListComponent } from './list/list.component';
+import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
 
 
 
@@ -14,6 +15,7 @@ import { ListComponent } from './list/list.component';
   declarations: [
     ListComponent,
     MonitorComponent,
+    CreateComponent,
  
    
     
@@ -23,7 +25,8 @@ import { ListComponent } from './list/list.component';
   ],
   imports: [
     CommonModule,
-    MonitorRoutingModule
+    MonitorRoutingModule,
+    FontAwesomeModule
   ]
 })
 export class MonitorModule { }

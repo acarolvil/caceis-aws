@@ -9,6 +9,10 @@ import { ListComponent } from './list/list.component';
 import { FormsModule } from '@angular/forms';
 import { EditComponent } from './edit/edit.component';
 import { ExcluirComponent } from './excluir/excluir.component';
+import { HttpClient} from '@angular/common/http';
+import { HttpClientModule } from '@angular/common/http';
+import {TableModule} from 'primeng/table';
+import { PaginatorModule } from 'primeng/paginator';
 
 
 
@@ -19,6 +23,7 @@ import { ExcluirComponent } from './excluir/excluir.component';
     CreateComponent,
     EditComponent,
     ExcluirComponent,
+  
     
   ],
   
@@ -27,6 +32,11 @@ import { ExcluirComponent } from './excluir/excluir.component';
     ParceirosRoutingModule,
     FormsModule,
     FontAwesomeModule,
+    HttpClientModule,
+    TableModule,
+    PaginatorModule
+
+
   ],
 
   bootstrap: [ParceirosComponent],
