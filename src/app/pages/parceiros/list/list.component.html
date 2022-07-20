@@ -1,27 +1,112 @@
-
-  <section>
+<section>
    <h1 class="titulo">Cadastro de Clientes prd</h1>
 
    <a class="btn btn-primary mr-1" [routerLink]="['cadastrar']">Cadastrar </a>
 
    <div>
-      <p-table [columns]="cols" [value]="list"  >
-         <ng-template pTemplate="header" let-columns >
+
+      <p-table #dt [value]="list" [paginator]="true" [paginator]="true"
+       [rows]="1" [rowsPerPageOptions]="[5,10,15,20]" [globalFilterFields]="['id','nome']"
+       [scrollable]="true" scrollHeight="500px"
+       
+       
+       
+       
+       >
+         
+         <ng-template pTemplate="caption">
+            <div style="text-align: right">        
+                <i class="pi pi-search" style="margin:4px 4px 0 0"></i>
+                <input type="text" pInputText size="50" placeholder="Global Filter"  style="width:auto">
+            </div>
+        </ng-template>
+         <ng-template pTemplate="header" let-columns>
+            
             <tr>
-               <th *ngFor="let col of columns" > 
-                  {{col.header}}
+
+               <th>id</th>
+               <th>
+                  <p-columnFilter type="text" field="name" ></p-columnFilter>
                </th>
-           
+               <th>nome</th>
+               <th>
+                  <p-columnFilter type="text" field="name"></p-columnFilter>
+               </th>
+               <th>autenticação</th>
+               <th>
+                  <p-columnFilter type="text" field="name"></p-columnFilter>
+               </th>
+               <th>código</th>
+               <th>
+                  <p-columnFilter type="text" field="name"></p-columnFilter>
+               </th>
+               <th>conexao host</th>
+               <th>
+                  <p-columnFilter type="text" field="name"></p-columnFilter>
+               </th>
+               <th>conexao porta</th>
+               <th>
+                  <p-columnFilter type="text" field="name"></p-columnFilter>
+               </th>
+               <th> usuário</th>
+               <th>
+                  <p-columnFilter type="text" field="name"></p-columnFilter>
+               </th>
+               <th>senha</th>
+               <th>
+                  <p-columnFilter type="text" field="name"></p-columnFilter>
+               </th>
+               <th>senha privada</th>
+               <th>
+                  <p-columnFilter type="text" field="name"></p-columnFilter>
+               </th>
+               <th> chave privada</th>
+               <th>
+                  <p-columnFilter type="text" field="name"></p-columnFilter>
+               </th>
+
+               <th>data da crição</th>
+               <th>
+                  <p-columnFilter type="text" field="name"></p-columnFilter>
+               </th>
+               <th>data da alteração</th>
+               <th>
+                  <p-columnFilter type="text" field="name"></p-columnFilter>
+               </th>
                <th></th>
             </tr>
+
+
+
+            
+
+
+
+
+
+
+
+
+
+            <th></th>
+
          </ng-template>
-         <ng-template pTemplate="body" let-item let-columns="columns" >
-            <tr>
-               <td *ngFor="let col of columns">
-                  {{item[col.field]}}
-               </td>
-              
-               
+
+         <ng-template pTemplate="body">
+            <tr *ngFor="let item of list">
+               <td>{{item.id}}</td>
+               <td>{{item.nome}}</td>
+               <td>{{item.autenticacao}}</td>
+               <td>{{item.codigo}}</td>
+               <td>{{item.conexaoHost}}</td>
+               <td>{{item.conexaoPorta}}</td>
+               <td>{{item.usuario}}</td>
+               <td>{{item.senha}}</td>
+               <td>{{item.senhaPrivada}}</td>
+               <td>{{item.chavePrivada}}</td>
+               <td>{{item.dataDaCriacao}}</td>
+               <td>{{item.dataDaAlteracao}}</td>
+               <td></td>
                <td>
                   <div class="d-flex justify-content-center">
                      <!-- <a class="btn btn-primary mr-1" routerLink="parceiros/list/editar/{{item.id}}">Editar</a> -->
@@ -31,14 +116,20 @@
                </td>
 
             </tr>
-            
-             
-          
+
+
+
+
          </ng-template>
-      
+
       </p-table>
-      <p-paginator></p-paginator>
-    
+
+
+
+
+
+
    </div>
-<router-outlet></router-outlet>
-   
+   <router-outlet></router-outlet>
+
+    

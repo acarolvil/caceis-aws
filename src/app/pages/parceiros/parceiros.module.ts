@@ -5,7 +5,6 @@ import { ParceirosRoutingModule } from './parceiros-routing.module';
 import { ParceirosComponent } from './parceiros.component';
 import { CreateComponent } from './create/create.component';
 import { ListComponent } from './list/list.component';
-
 import { FormsModule } from '@angular/forms';
 import { EditComponent } from './edit/edit.component';
 import { ExcluirComponent } from './excluir/excluir.component';
@@ -13,6 +12,8 @@ import { HttpClient} from '@angular/common/http';
 import { HttpClientModule } from '@angular/common/http';
 import {TableModule} from 'primeng/table';
 import { PaginatorModule } from 'primeng/paginator';
+import { ColumnFilter } from 'primeng/table';
+
 
 
 
@@ -23,6 +24,7 @@ import { PaginatorModule } from 'primeng/paginator';
     CreateComponent,
     EditComponent,
     ExcluirComponent,
+    
   
     
   ],
