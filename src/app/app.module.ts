@@ -10,16 +10,9 @@ import { IconsModule } from './icons/icons.module';
 import {TableModule} from 'primeng/table';
 import { HttpClient, HttpClientModule } from '@angular/common/http';
 import { PaginatorModule } from 'primeng/paginator';
-import { PrimeNGConfig } from 'primeng/api';
+import { FilterMatchMode, PrimeNGConfig } from 'primeng/api';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
-
-
-
-
-
-
-
-
+import { faGreaterThan, faGreaterThanEqual, faLessThan } from '@fortawesome/free-solid-svg-icons';
 
 
 @NgModule({
@@ -48,4 +41,78 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
   providers: [],
   bootstrap: [AppComponent]
 })
-export class AppModule { }
+export class AppModule {
+  constructor(private config: PrimeNGConfig) {
+    this.config.filterMatchModeOptions = {
+      text: [
+          FilterMatchMode.STARTS_WITH,
+          FilterMatchMode.CONTAINS,
+          FilterMatchMode.NOT_CONTAINS,
+          FilterMatchMode.ENDS_WITH,
+          FilterMatchMode.EQUALS,
+          FilterMatchMode.NOT_EQUALS
+      ],
+      numeric: [
+          FilterMatchMode.EQUALS,
+          FilterMatchMode.NOT_EQUALS,
+          FilterMatchMode.LESS_THAN,
+          FilterMatchMode.LESS_THAN_OR_EQUAL_TO,
+          FilterMatchMode.GREATER_THAN,
+          FilterMatchMode.GREATER_THAN_OR_EQUAL_TO
+      ],
+      date: [
+          FilterMatchMode.DATE_IS,
+          FilterMatchMode.DATE_IS_NOT,
+          FilterMatchMode.DATE_BEFORE,
+          FilterMatchMode.DATE_AFTER
+      ]
+  }
+  this.config.filterMatchModeOptions = {
+            text: [
+                FilterMatchMode.STARTS_WITH,
+                FilterMatchMode.CONTAINS,
+                FilterMatchMode.NOT_CONTAINS,
+                FilterMatchMode.ENDS_WITH,
+                FilterMatchMode.EQUALS,
+                FilterMatchMode.NOT_EQUALS,
+            ],
+            numeric: [
+                FilterMatchMode.EQUALS,
+                FilterMatchMode.NOT_EQUALS,
+                FilterMatchMode.LESS_THAN,
+                FilterMatchMode.LESS_THAN_OR_EQUAL_TO,
+                FilterMatchMode.GREATER_THAN,
+                FilterMatchMode.GREATER_THAN_OR_EQUAL_TO,
+            ],
+            date: [
+                FilterMatchMode.DATE_IS,
+                FilterMatchMode.DATE_IS_NOT,
+                FilterMatchMode.DATE_BEFORE,
+                FilterMatchMode.DATE_AFTER,
+           
+           
+              ],
+        };
+        
+        this.config.setTranslation({
+          startsWith: 'Inicia em',
+          contains: 'Contém',
+          notContains: 'Não contém',
+          endsWith: 'Termina em',
+          equals: 'Iguais',
+          notEquals: 'Diferentes',
+          dateIs: 'Data',
+          dateIsNot: 'Data não é',
+          dateAfter: 'Data depois'
+          
+
+
+
+      
+
+
+        })
+
+        
+  }
+}

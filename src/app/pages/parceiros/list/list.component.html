@@ -5,95 +5,129 @@
 
    <div>
 
-      <p-table #dt [value]="list" [paginator]="true" [paginator]="true"
-       [rows]="1" [rowsPerPageOptions]="[5,10,15,20]" [globalFilterFields]="['id','nome']"
-       [scrollable]="true" scrollHeight="500px"
-       
-       
-       
-       
+      <p-table #dt [value]="list" 
+         [paginator]="list.length > 0" 
+       [rows]="1" 
+       [rowsPerPageOptions]="[5,10,15,20]"  
+       [globalFilterFields]="['id','nome']"
+       [scrollable]="true" 
+       scrollHeight="500px"
+       [loading]="loading"
+      
+
        >
-         
          <ng-template pTemplate="caption">
             <div style="text-align: right">        
                 <i class="pi pi-search" style="margin:4px 4px 0 0"></i>
-                <input type="text" pInputText size="50" placeholder="Global Filter"  style="width:auto">
+                <input type="text" 
+                pInputText 
+                size="50" 
+                placeholder="Global Filter" 
+                 style="width:auto"
+                 #input
+                 (input)="dt.filterGlobal(input.value, 'contains')"
+                 >
             </div>
         </ng-template>
          <ng-template pTemplate="header" let-columns>
-            
             <tr>
-
-               <th>id</th>
-               <th>
-                  <p-columnFilter type="text" field="name" ></p-columnFilter>
+              
+               <th style="white-space: nowrap;"  [pSortableColumn]="'id'">
+                  id
+                  <p-sortIcon field="id"></p-sortIcon>
+                  <span>
+                     <p-columnFilter type="text" field="id" display="menu"></p-columnFilter>
+                  </span>
                </th>
-               <th>nome</th>
-               <th>
-                  <p-columnFilter type="text" field="name"></p-columnFilter>
+               <th style="white-space: nowrap;"[pSortableColumn]="'nome'">
+                  nome
+                  <p-sortIcon field="nome"></p-sortIcon>
+                  <span>
+                     <p-columnFilter type="text" field="nome" display="menu"></p-columnFilter>
+                  </span>
                </th>
-               <th>autenticação</th>
-               <th>
-                  <p-columnFilter type="text" field="name"></p-columnFilter>
+               <th style="white-space: nowrap;"[pSortableColumn]="'autenticacao'">
+                  autenticação
+                  <p-sortIcon field="autenticacao"></p-sortIcon>
+                  <span>
+                     <p-columnFilter type="text" field="autenticacao" display="menu"></p-columnFilter>
+                  </span>
                </th>
-               <th>código</th>
-               <th>
-                  <p-columnFilter type="text" field="name"></p-columnFilter>
+               <th style="white-space: nowrap;"[pSortableColumn]="'codigo'">
+                  código
+                  <p-sortIcon field="codigo"></p-sortIcon>
+                  <span>
+                     <p-columnFilter type="text" field="codigo" display="menu"></p-columnFilter>
+                  </span>
                </th>
-               <th>conexao host</th>
-               <th>
-                  <p-columnFilter type="text" field="name"></p-columnFilter>
+               <th style="white-space: nowrap;" [pSortableColumn]="'conexaoHost'">
+                  conexao host
+                  <p-sortIcon field="conexaoHost"></p-sortIcon>
+                  <span>
+                     <p-columnFilter type="text" field="conexaoHost" display="menu"></p-columnFilter>
+                  </span>
                </th>
-               <th>conexao porta</th>
-               <th>
-                  <p-columnFilter type="text" field="name"></p-columnFilter>
+               <th style="white-space: nowrap;" [pSortableColumn]="'conexaoPorta'">
+                  conexao porta
+                  <p-sortIcon field="conexaoPorta"></p-sortIcon>
+                  <span>
+                     <p-columnFilter type="text" field="conexaoPorta" display="menu"></p-columnFilter>
+                  </span>
                </th>
-               <th> usuário</th>
-               <th>
-                  <p-columnFilter type="text" field="name"></p-columnFilter>
+               <th style="white-space: nowrap;" [pSortableColumn]="'usuario'">
+                  usuário
+                  <p-sortIcon field="usuario"></p-sortIcon>
+                  <span>
+                     <p-columnFilter type="text" field="usuario" display="menu"></p-columnFilter>
+                  </span>
                </th>
-               <th>senha</th>
-               <th>
-                  <p-columnFilter type="text" field="name"></p-columnFilter>
+               <th style="white-space: nowrap;" [pSortableColumn]="'senha'">
+                  senha
+                  <p-sortIcon field="senha"></p-sortIcon>
+                  <span>
+                     <p-columnFilter type="text" field="senha" display="menu"></p-columnFilter>
+                  </span>
                </th>
-               <th>senha privada</th>
-               <th>
-                  <p-columnFilter type="text" field="name"></p-columnFilter>
+               <th style="white-space: nowrap;" [pSortableColumn]="'senhaPrivada'">
+                  senha privada
+                  <p-sortIcon field="senhaPrivada"></p-sortIcon>
+                  <span>
+                     <p-columnFilter type="text" field="senhaPrivada" display="menu"></p-columnFilter>
+                  </span>
                </th>
-               <th> chave privada</th>
-               <th>
-                  <p-columnFilter type="text" field="name"></p-columnFilter>
+               <th style="white-space: nowrap;" [pSortableColumn]="'chavePrivada'">
+                  chave privada
+                  <p-sortIcon field="chavePrivada"></p-sortIcon>
+                  <span>
+                     <p-columnFilter type="text" field="chavePrivada" display="menu"></p-columnFilter>
+                  </span>
                </th>
-
-               <th>data da crição</th>
-               <th>
-                  <p-columnFilter type="text" field="name"></p-columnFilter>
+               <th style="white-space: nowrap;" [pSortableColumn]="'dataDaCriação'">
+                  data da criação
+                  <p-sortIcon field="dataDaCriação"></p-sortIcon>
+                  <span>
+                     <p-columnFilter type="text" field="dataDaCriação" display="menu"></p-columnFilter>
+                  </span>
                </th>
-               <th>data da alteração</th>
-               <th>
-                  <p-columnFilter type="text" field="name"></p-columnFilter>
+               <th style="white-space: nowrap;" [pSortableColumn]="'dataDaalteracao'">
+                  data da alteração
+                  <p-sortIcon field="dataDaalteracao"></p-sortIcon>
+                  <span>
+                     <p-columnFilter type="text" field="dataDaalteracao" display="menu"></p-columnFilter>
+                  </span>
                </th>
-               <th></th>
+               <th id="teste">
+                  
+               </th>
+                 
+                 
+              
             </tr>
-
-
-
-            
-
-
-
-
-
-
-
-
-
-            <th></th>
-
+               
          </ng-template>
-
          <ng-template pTemplate="body">
             <tr *ngFor="let item of list">
+              
                <td>{{item.id}}</td>
                <td>{{item.nome}}</td>
                <td>{{item.autenticacao}}</td>
@@ -106,7 +140,6 @@
                <td>{{item.chavePrivada}}</td>
                <td>{{item.dataDaCriacao}}</td>
                <td>{{item.dataDaAlteracao}}</td>
-               <td></td>
                <td>
                   <div class="d-flex justify-content-center">
                      <!-- <a class="btn btn-primary mr-1" routerLink="parceiros/list/editar/{{item.id}}">Editar</a> -->
@@ -114,14 +147,8 @@
                      <a class="btn btn-secondary mr-1" [routerLink]="['excluir', item.id]">Excluir</a>
                   </div>
                </td>
-
             </tr>
-
-
-
-
          </ng-template>
-
       </p-table>
 
 
@@ -130,6 +157,7 @@
 
 
    </div>
+   
    <router-outlet></router-outlet>
 
     
