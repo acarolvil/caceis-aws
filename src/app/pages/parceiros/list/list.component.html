@@ -13,6 +13,17 @@
        [scrollable]="true" 
        scrollHeight="500px"
        [loading]="loading"
+       selectionMode="single"
+       dataKey="code" 
+       styleClass="mt-5" 
+     
+      
+        
+
+              
+
+    
+      
       
 
        >
@@ -31,7 +42,7 @@
         </ng-template>
          <ng-template pTemplate="header" let-columns>
             <tr>
-              
+             
                <th style="white-space: nowrap;"  [pSortableColumn]="'id'">
                   id
                   <p-sortIcon field="id"></p-sortIcon>
@@ -125,8 +136,12 @@
             </tr>
                
          </ng-template>
-         <ng-template pTemplate="body">
-            <tr *ngFor="let item of list">
+         <ng-template pTemplate="body" >
+            <tr   *ngFor="let item of list">
+              
+                  <td style="width: 3rem">
+                     <p-tableHeaderCheckbox ></p-tableHeaderCheckbox>
+                 </td>
               
                <td>{{item.id}}</td>
                <td>{{item.nome}}</td>

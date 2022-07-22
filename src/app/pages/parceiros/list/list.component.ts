@@ -18,6 +18,7 @@ import { ParceirosService } from 'src/app/service/parceiros.service';
 
 
 
+
 @Injectable()
 
 @Component({
@@ -30,6 +31,9 @@ export class ListComponent implements OnInit {
 
   list: ParceirosModel[] = [];
   loading = false;
+  
+
+  
   constructor(
     private parceirosService: ParceirosService
   ) {
@@ -53,4 +57,18 @@ export class ListComponent implements OnInit {
 
   ngOnInit(): void {
   }
+
+  isOutOfStock(data:any) {
+    return data.inventoryStatus === 'OUTOFSTOCK';
+}
+
+
+
+
+
+
+
+
+
+ 
 }
